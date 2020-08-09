@@ -9,9 +9,12 @@ Features of the map includes:
 
 Step-by-step tutorial for this project can be found on https://link.medium.com/n79z7sB2mV
 
-
+pip install -r .\requirements.txt #Command to install all dependencies
 # Requirements
-* Python 2.7.x
-* Folium
-* Pandas
+* pandas
+* folium
+* mongoengine
+* geopy
+* paho.mqtt
+* dnspython
 
