@@ -72,23 +72,21 @@ for index,j in enumerate(ambulance_loc):
         m.save('index.html')
 
     elif distances[0][-1] > 0.2:
-         publish.single(distances[0][0], payload="none", hostname=MQTT_BROKER,
+        publish.single(distances[0][0], payload="none", hostname=MQTT_BROKER,
             port=1883)  # , client_id="AMB9632991318")
-         folium.Marker(location=signalA, popup ="Silkboard traffic signal", icon=folium.Icon(
+        folium.Marker(location=signalA, popup ="Silkboard traffic signal", icon=folium.Icon(
             icon_color='#FF0000',
             icon="fa-circle", prefix='fa')).add_to(m)
-         folium.Marker(location=signalB, popup ="Silkboard traffic signal", icon=folium.Icon(
+        folium.Marker(location=signalB, popup ="Silkboard traffic signal", icon=folium.Icon(
             icon_color='#FF0000',
             icon="fa-circle", prefix='fa')).add_to(m)
-         folium.Marker(location=signalC, popup ="Silkboard traffic signal", icon=folium.Icon(
+        folium.Marker(location=signalC, popup ="Silkboard traffic signal", icon=folium.Icon(
             icon_color='#00FF00',
             icon="fa-circle", prefix='fa')).add_to(m)
-         m.save('index.html')
-
-
-   else:
-        publish.single(distances[0][0], payload="open", hostname=MQTT_BROKER, port=1883)  # , client_id="AMB9632991318")
-        folium.Marker(location=signalA, popup="Silkboard traffic signal", icon=folium.Icon(
+        m.save('index.html')
+    else:
+        publish.single(distances[0][0], payload="open", hostname=MQTT_BROKER, port=1883) #, client_id="AMB9632991318")
+        folium.Marker(location=signalA, popup ="Silkboard traffic signal A - [Ambulance has arrived]", icon=folium.Icon(
             icon_color='#00FF00',
             icon="fa-circle", prefix='fa')).add_to(m)
         folium.Marker(location=signalB, popup="Silkboard traffic signal", icon=folium.Icon(
