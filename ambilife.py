@@ -13,7 +13,7 @@ import json
 import paho.mqtt.publish as publish
 
 # Broker running on local machine
-MQTT_BROKER = "13.233.84.7"
+MQTT_BROKER = "13.233.215.221"
 
 signalA = [12.917200, 77.622379]
 signalB = [12.917324, 77.623191]
