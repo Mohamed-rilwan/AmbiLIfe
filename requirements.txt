@@ -4,3 +4,4 @@ mongoengine
 geopy
 paho.mqtt
 dnspython
+tkinter
