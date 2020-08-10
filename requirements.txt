@@ -1,0 +1,6 @@
+pandas
+folium
+mongoengine
+geopy
+paho.mqtt
+dnspython
